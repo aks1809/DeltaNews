@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DeltaNews</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="/stylesheets/main.css">
+    <link rel="icon" type="image/gif" href="/images/icon.png">
+</head>
+<body>
+    <div class="d-none d-lg-flex bd-highlight mb-0 date px-5 text-danger">
+        <div class="mr-auto p-2 bd-highlight d-flex"><i class="p-1 fas fa-calendar-day"></i>&nbsp;&nbsp;<strong class="text-dark" id="todaysDate"></strong></div>
+        <div class="p-2 bd-highlight d-flex"><i class="p-1 fas fa-newspaper rounded-circle"></i>&nbsp;&nbsp;<span class="text-dark">About</span></div>
+        <div class="p-2 bd-highlight d-flex"><i class="p-1 fas fa-heart rounded-circle"></i>&nbsp;&nbsp;<span class="text-dark">Features</span></div>
+        <div class="p-2 bd-highlight d-flex"><i class="p-1 fas fa-envelope-open-text rounded-circle"></i>&nbsp;&nbsp;<span class="text-dark">Contact Us</span></div>
+    </div>
+    <div class="jumbotron logo p-3 bg-white pb-0 mb-0">
+        <a href="/" id="header"><img src="/images/logo.png" alt="Logo_NewzNine"><strong class="align-middle">DELTA NEWS</strong></a>
+        <hr class="border-top border-muted mb-0">
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#"><img src="/images/icon.png" alt="Logo_NewzNine"> HOME <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">LINK</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                CATEGORIES
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="/top-headlines/business/1">BUSINESS</a>
+                <a class="dropdown-item" href="/top-headlines/economy/1">ENTERTAINMENT</a>
+                <a class="dropdown-item" href="/top-headlines/general/1">GENERAL</a>
+                <a class="dropdown-item" href="/top-headlines/health/1">HEALTH</a>
+                <a class="dropdown-item" href="/top-headlines/science/1">SCIENCE</a>
+                <a class="dropdown-item" href="/top-headlines/sports/1">SPORTS</a>
+                <a class="dropdown-item" href="/top-headlines/technology/1">TECHNOLOGY</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="/1">WHAT'S TRENDING</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  PARTNER WEBSITES
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">HINDUSTAN TIMES</a>
+                  <a class="dropdown-item" href="#">BING NEWS</a>
+            </li>
+          </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item ml-auto"><a class="nav-link" href="#">SIGN IN</a></li>
+                <li class="nav-item ml-auto"><a class="nav-link" href="#">SIGN OUT</a></li>
+                <button id="open_search" class="btn border-success rounded-circle ml-auto"><i class="fas fa-search text-success"></i></button>
+            </ul>
+        </div>
+    </nav>
+    <div id="scrolldownbox">
+        <div class="searchbox d-flex justify-content-center align-items-center">
+            <button id="close_search" class="rounded-circle">X</button>
+            <div class="form">
+                <form class="form-inline">
+                    <div class="form-group mx-3 mb-2">
+                      <input type="text" class="form-control" id="search" placeholder="Looking For..." required>
+                    </div>
+                    <a href="" id="search_button" class="btn btn-danger mb-2"><i class="fas fa-search text-white"></i></a>
+                </form>
+            </div>
+        </div>
+    </div>

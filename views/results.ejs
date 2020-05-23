@@ -1,0 +1,43 @@
+<%- include ("partials/header") %>
+    <div class="jumbotron m-0 pb-2 bg-white">
+        <% data.forEach(function(item){ %>
+            <div class="container mb-4 border border-dark rounded-lg p-0">
+                    <div class="card" style="max-width: 100%;">
+                        <div class="row no-gutters">
+                            <div class="col-md-4">
+                                <img src=<%= item.urlToImage %> class="card-img thumbnail" alt="...">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-center mb-1">
+                                        <span class="author2 text-muted"><i class="p-1 fas fa-calendar-day text-muted"></i>&nbsp;<%= item.publishedAt.substring(0,10) %></span>
+                                        <a href=<%= item.url %> target="_blank" rel="noopener noreferrer" class="btn btn-outline-dark shadow read_more">Read Full Article</a>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center mb-1">
+                                        <h3 class="card-title"><strong><%= item.title %></strong></h3>
+                                        <span class="author2 text-muted"><%= item.author %></span>
+                                    </div>
+                                    <p class="card-text small-para"><%= item.content %></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        <% }); %>
+        <div class="m-auto d-flex justify-content-center align-items-center">
+            <% if(number > 1){ %>
+                <a href=<%= number-1 %> id="prev" class="px-2"><i class="fas fa-arrow-circle-left"></i></a>
+            <% } %>
+            <% if(number != 1){ %>
+                <a href="1" class="numbers p-1 px-2 mx-2 rounded-lg">1</a>
+            <% } %>
+            <span class="numbers p-2 mx-2 px-3 rounded-lg border border-danger"><%= number %></span>
+            <% if(number != Math.min((100%10>0?1:0)+Math.floor(100/10),(totalResults%10>0?1:0)+Math.floor(totalResults/10))){ %>
+                <a href=<%= Math.min((100%10>0?1:0)+Math.floor(100/10),(totalResults%10>0?1:0)+Math.floor(totalResults/10)) %> class="numbers p-1 px-2 mx-2 rounded-lg"><%= Math.min((100%10>0?1:0)+Math.floor(100/10),(totalResults%10>0?1:0)+Math.floor(totalResults/10)) %></a>
+            <% } %>
+            <% if(number < Math.min((100%10>0?1:0)+Math.floor(100/10),(totalResults%10>0?1:0)+Math.floor(totalResults/10))){ %>
+                <a href=<%= number+1 %> id="next" class="px-2"><i class="fas fa-arrow-circle-right"></i></a>
+            <% } %>
+        </div>
+    </div>
+<%- include ("partials/footer") %>

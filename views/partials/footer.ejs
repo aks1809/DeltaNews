@@ -1,0 +1,129 @@
+<div class="jumbotron bg-dark rounded-0 py-5 mb-0">
+    <div class="row">
+        <div class="col-lg-4 px-4 mb-5">
+            <h2 class="d-flex align-items-center">
+                <i class="far fa-user-circle text-danger display-4"></i>&nbsp;
+                <span class="text-white font-weight-bold"> About Us</span>
+            </h2>
+            <hr class="border-top border-light">
+            <p class="text-light text-justify mb-4 about">Lorem, ipsum dolor sit amet. eos repudiandae. Enim perferendis id totam est quaerat dicta exercitationem soluta voluptate a, sint blanditiis qui aliquam, dolore, officiis temporibus saepe? Pariatur repudiandae libero nesciunt molestiae doloribus sapiente, dolore ut, nisi, corrupti nam sunt rerum vero illum enim itaque magni beatae suscipit perspiciatis id! Ratione vel corporis alias porro soluta id error dolorum delectus.</p>
+            <a href="http://" class="d-flex align-items-center"><p><i class="far fa-envelope-open text-danger border border-danger p-2 rounded-circle"></i>&nbsp;CONTACT US</p></a>
+            <a href="http://" class="d-flex align-items-center"><p><i class="fas fa-phone text-danger border border-danger p-2 rounded-circle"></i>&nbsp;CALL US ANYTIME</p></a>
+            <hr class="border-top border-light">
+            <div class="social my-2 d-flex justify-content-around">
+                <a href="http://"><div class="bg-danger dimensions border-danger rounded-circle d-flex align-items-center justify-content-center"><i class="fab fa-facebook-f text-white"></i></div></a>
+                <a href="http://"><div class="bg-danger dimensions border-danger rounded-circle d-flex align-items-center justify-content-center"><i class="fab fa-twitter"></i></div></a>
+                <a href="http://"><div class="bg-danger dimensions border-danger rounded-circle d-flex align-items-center justify-content-center"><i class="fab fa-google-plus-g"></i></div></a>
+                <a href="http://"><div class="bg-danger dimensions border-danger rounded-circle d-flex align-items-center justify-content-center"><i class="fab fa-pinterest-p"></i></div></a>
+                <a href="http://"><div class="bg-danger dimensions border-danger rounded-circle d-flex align-items-center justify-content-center"><i class="fab fa-linkedin-in"></i></div></a>
+                <a href="http://"><div class="bg-danger dimensions border-danger rounded-circle d-flex align-items-center justify-content-center"><i class="fab fa-behance"></i></div></a>
+            </div>
+        </div>
+        <div class="col-lg-4 px-4 mb-5">
+            <h2 class="d-flex align-items-center">
+                <i class="fab fa-telegram-plane text-danger display-4"></i>&nbsp;
+                <span class="text-white font-weight-bold"> Latest Post</span>
+            </h2>
+            <hr class="border-top border-light">
+            <div class="latest">
+                <div class="card mb-3 bg-dark border-0" style="max-width: 500px;">
+                    <div class="row no-gutters">
+                        <div class="col-4">
+                            <a href=<%= headlines[0].url %>><img src=<%= headlines[0].urlToImage %> class="card-img square" alt="NewsCover"></a>
+                        </div>
+                        <div class="col-8">
+                            <div class="card-body p-0 px-2">
+                                <p class="card-text mb-1"><small class="text-muted"><i class="far fa-calendar"></i>&nbsp; <%= headlines[0].publishedAt.substring(0,10) %></small></p>
+                                <a href=<%= headlines[0].url %>><p class="text-white"><strong><%= headlines[0].title %></strong></p></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="latest">
+                <div class="card mb-3 bg-dark border-0" style="max-width: 500px;">
+                    <div class="row no-gutters">
+                        <div class="col-4">
+                            <a href=<%= headlines[1].url %>><img src=<%= headlines[1].urlToImage %> class="card-img square" alt="NewsCover"></a>
+                        </div>
+                        <div class="col-8">
+                            <div class="card-body p-0 px-2">
+                                <p class="card-text mb-1"><small class="text-muted"><i class="far fa-calendar"></i>&nbsp; <%= headlines[1].publishedAt.substring(0,10) %></small></p>
+                                <a href=<%= headlines[1].url %>><p class="text-white"><strong><%= headlines[1].title %></strong></p></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="latest">
+                <div class="card mb-3 bg-dark border-0" style="max-width: 500px;">
+                    <div class="row no-gutters">
+                        <div class="col-4">
+                            <a href=<%= headlines[2].url %>><img src=<%= headlines[2].urlToImage %> class="card-img square" alt="NewsCover"></a>
+                        </div>
+                        <div class="col-8">
+                            <div class="card-body p-0 px-2">
+                                <p class="card-text mb-1"><small class="text-muted"><i class="far fa-calendar"></i>&nbsp; <%= headlines[2].publishedAt.substring(0,10) %></small></p>
+                                <a href=<%= headlines[2].url %>><p class="text-white"><strong><%= headlines[2].title %></strong></p></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 px-4 mb-5">
+            <h2 class="d-flex align-items-center">
+                <i class="fab fa-neos text-danger display-4"></i>&nbsp;
+                <span class="text-white font-weight-bold"> Newsletter</span>
+            </h2>
+            <hr class="border-top border-light">
+            <form class="form-inline subemail mb-5" action="/" method="POST">
+                <div class="form-group mr-2 mb-2">
+                    <input type="email" class="form-control" id="input_email" name="subemail" placeholder="Enter your email address">
+                </div>
+                <button type="submit" class="btn btn-danger mb-2"><strong>SUSCRIBE</strong></button>
+            </form>
+            <h2 class="d-flex align-items-center">
+                <i class="fas fa-toilet-paper text-danger" style="font-size: 3.5rem;"></i>&nbsp;
+                <span class="text-white font-weight-bold"> Categories</span>
+            </h2>
+            <hr class="border-top border-light">
+            <div class="text-white categories">
+                <div class="row">
+                    <div class="d-flex flex-column mx-2 col">
+                        <p><a href="/1">HEADLINES</a></p>
+                        <p><a href="/top-headlines/business/1">BUSINESS</a></p>
+                        <p><a href="/top-headlines/entertainment/1">ENTERTAINMENT</a></p>
+                        <p><a href="/top-headlines/general/1">GENERAL</a></p>
+                    </div>
+                    <div class="d-flex flex-column mx-2 col">
+                        <p><a href="/top-headlines/sports/1">SPORTS</a></p>
+                        <p><a href="/top-headlines/health/1">HEALTH</a></p>
+                        <p><a href="/top-headlines/technology/1">TECHNOLOGY</a></p>
+                        <p><a href="/top-headlines/science/1">SCIENCE</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="copyright p-3">
+    <div class="d-flex flex-column flex-lg-row align-items-center justify-content-between bd-highlight text-white">
+        <div class="p-2 bd-highlight text-center">
+            &copy; Copyright by Akshay Chaturvedi. All rights reserved.
+        </div>
+        <div class="d-flex">
+            <div class="p-2 bd-highlight">ABOUT US</div>
+            <div class="p-2 bd-highlight">PAGES</div>
+            <div class="p-2 bd-highlight">FEATURES</div>
+            <div class="p-2 bd-highlight">CONTACTS</div>
+        </div>
+    </div>
+</div>
+<hr class="border border-danger m-0 bg-danger p-1">
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="/scripts/main.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js" integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" crossorigin="anonymous"></script>
+</body>
+</html>
